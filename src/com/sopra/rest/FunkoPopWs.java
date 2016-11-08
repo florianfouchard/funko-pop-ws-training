@@ -2,6 +2,7 @@ package com.sopra.rest;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -18,7 +19,10 @@ import com.sopra.rest.buisness.FunkoPopService;
 @Path( "pop" )
 public class FunkoPopWs
 {
-	static FunkoPopService service = new FunkoPopService();
+	//static FunkoPopService service = new FunkoPopService();
+	
+	@Inject
+	FunkoPopService service;
 
 	// READ ALL
 
